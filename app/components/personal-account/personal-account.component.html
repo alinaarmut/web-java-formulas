@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Личный кабинет</title>
+  <link rel="stylesheet" href="personal-account.component.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<button class="home-icon" (click)="navigateHome()">
+  <i class="fas fa-home"></i>
+</button>
+<header>
+  <h1>Персональные данные</h1>
+</header>
+
+<div class="container">
+
+  <div class="profile-section" *ngIf="userData">
+    <div>
+      <h2>Привет, {{ userData.firstName }}!</h2>
+      <p>Email: {{ userData.email }}</p>
+    </div>
+    <div>
+      <p>Роль: {{ userData.role }}</p>
+    </div>
+  </div>
+
+
+  <!-- Раздел прогресса -->
+  <div class="progress-section" *ngIf="subscriptionStatus === 'ACTIVE'">
+    <h2>Ваш прогресс</h2>
+    <p>Выучено формул: {{ progress }}%</p>
+    <div class="progress-bar">
+      <div class="progress-bar-fill" [style.width]="progress + '%'" [innerText]="progress + '%'"></div>
+    </div>
+  </div>
+  <div *ngIf="subscriptionStatus !== 'ACTIVE'">
+    <h2>Подписка не активна</h2>
+    <p>Для просмотра прогресса нужно активировать подписку.</p>
+  </div>
+
+  <div class="card-section">
+    <h2>Ваши упражнения</h2>
+    <div class="card">
+      <h3>Упражнение 1: Соединение формул</h3>
+      <button [routerLink]="'/exerciseOne'">Начать</button>
+    </div>
+    <div class="card">
+      <h3>Упражнение 2: Карточки</h3>
+      <button [routerLink]="'/exerciseTwo'">Начать</button>
+    </div>
+  </div>
+
+
+  <div class="subscription-section" *ngIf="subscriptionStatus !== 'ACTIVE'">
+    <p>Для доступа к полному функционалу, включая отслеживание прогресса, купите подписку!</p>
+    <button  (click)="buySubscription()" class="subscription-button">Купить подписку</button>
+  </div>
+</div>
+
+<div class="footer">
+</div>
+</body>
+</html>

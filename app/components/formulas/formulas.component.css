@@ -1,0 +1,72 @@
+body {
+
+  background: linear-gradient(90deg, #e2e2e2, #7494ec);
+}
+
+
+* {
+  font-family: "Poppins", sans-serif;
+
+}
+.category {
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.formulas-row {
+  display: flex;
+  flex-wrap: wrap; /* Это позволит формуле переходить на новую строку, если не помещается */
+  gap: 20px; /* Отступ между формулами */
+  padding: 10px 0;
+}
+
+.formula-card {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.formula-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.formula-card div {
+  font-size: 18px;
+}
+
+.home-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.delete-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: black;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  color: darkgray;
+}
+

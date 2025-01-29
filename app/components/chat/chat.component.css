@@ -1,0 +1,48 @@
+.chat-box {
+  width: 100%;
+  height: 380px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.messages {
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.message {
+  background-color: #f1f1f1;
+  padding: 5px;
+  margin: 5px 0;
+  border-radius: 5px;
+}
+
+input {
+  padding: 10px;
+  margin-top: 10px;
+  width: 80%;
+  height: 30px; /* Сделано выше */
+  border: 1px solid #ccc;
+  font-size: 16px; /* Увеличено для лучшего ввода */
+}
+
+button {
+  padding: 8px 15px; /* Меньше padding для уменьшения кнопки */
+  margin-top: 10px;
+  width: auto;
+  align-self: flex-end; /* Позиционируем кнопку справа */
+  font-size: 14px; /* Меньше размер шрифта */
+  border: none;
+  color: white;
+  border-radius: 5px; /* Округлые края */
+  cursor: pointer;
+  background-color: #7494ec;;
+  margin-right: 20px;
+}
+.user-name {
+  font-weight: bold;
+  color: #333;
+  font-size: 0.9em;
+}

@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #e2e2e2, #7494ec);
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+}
+
+.card {
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.card.selected {
+  background-color: #e0e0e0;
+}
+
+.card.matched {
+  background-color: #d1e7dd;
+  border-color: #0f5132;
+}
+
+.card.incorrect {
+  background-color: #f8d7da;
+  border-color: #842029;
+}
+
+.card:hover {
+  background-color: #e9ecef;
+}
+
+#message {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+#message.success {
+  background-color: #d1e7dd;
+  border-color: #0f5132;
+  color: #0f5132;
+}
+
+#message.error {
+  background-color: #f8d7da;
+  border-color: #842029;
+  color: #842029;
+}
+
+#progress {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#remainingAttempts {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.home-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

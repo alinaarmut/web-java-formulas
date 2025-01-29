@@ -1,0 +1,23 @@
+<div class="chat-box">
+  <div class="messages">
+
+    <div *ngFor="let msg of messages" class="message">
+      <span class="message-text">{{ msg.messageText }}</span>
+<!--      <span class="user-name">{{msg.senderUsername}}</span>-->
+    </div>
+  </div>
+  <input [(ngModel)]="messageText" placeholder="Введите сообщение" />
+  <button (click)="sendMessage()">Отправить</button>
+</div>
+
+
+<!--<div class="chat-box">-->
+<!--  <div class="messages">-->
+<!--  &lt;!&ndash; Выпадающий список для выбора получателя &ndash;&gt;-->
+<!--  <select [(ngModel)]="selectedReceiver" class="form-control">-->
+<!--    <option *ngFor="let user of users" [value]="user.username">{{ user.username }}</option>-->
+<!--  </select>-->
+<!--  </div>-->
+<!--  <input [(ngModel)]="messageText" class="form-control" placeholder="Введите сообщение">-->
+<!--  <button (click)="sendMessage()">Отправить</button>-->
+<!--</div>-->

@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  justify-content: flex-start; /* Изменено на flex-start, чтобы контейнер был выровнен влево */
+  align-items: flex-start; /* Устанавливает выравнивание по верхнему краю */
+  min-height: 100vh;
+  background: linear-gradient(90deg, #e2e2e2, #7494ec);
+  padding-left: 20px; /* Добавлен отступ слева, чтобы не прижимать к краю */
+  padding-top: 30px; /* Добавлен отступ сверху для общего сдвига вниз */
+}
+
+.teacher-container {
+  padding: 30px; /* Увеличен отступ внутри контейнера */
+  background-color: #ffffff; /* Белый фон */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Тень */
+  border-radius: 8px; /* Скругление углов */
+  width: 100%; /* Контейнер теперь занимает всю доступную ширину */
+  max-width: 900px; /* Максимальная ширина */
+  position: relative; /* Для позиционирования кнопки выхода */
+}
+
+.header {
+  margin-bottom: 30px; /* Отступ снизу для блока с названием и кодом */
+  position: relative; /* Для кнопки выхода */
+}
+
+.teacher-container h1 {
+  margin-bottom: 10px; /* Отступ после заголовка */
+  font-size: 24px;
+  color: #333;
+}
+
+.teacher-code {
+  margin-bottom: 20px; /* Отступ после блока teacher-code */
+  font-size: 16px;
+  color: #555;
+}
+
+.teacher-code p {
+  margin-bottom: 10px; /* Отступы между текстами внутри teacher-code */
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column; /* Располагаем содержимое по вертикали */
+  gap: 20px; /* Отступы между элементами */
+}
+
+/* Таблица с учениками */
+.students-table {
+  flex: 1; /* Ширина таблицы */
+}
+
+.students-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.students-table th, .students-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.students-table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+.chat-container {
+  flex: 1;
+  margin-left: 20px;
+  margin-right: 5px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 400px;
+  margin-top: 40px;
+}
+
+.logout-btn {
+  position: absolute;
+  margin-top: 10px;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}

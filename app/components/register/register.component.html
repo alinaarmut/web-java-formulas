@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма регистрации</title>
+  <link rel="stylesheet" href="register.component.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div class="container">
+  <div class="form-box register">
+
+    <form id="registerForm" (ngSubmit)="tryRegister()" #registerForm="ngForm">
+      <h1>Регистрация
+      </h1>
+
+      <div class="input-box">
+        <input type="text" placeholder="Ник" name="Username" [(ngModel)]="dataRegister.username" required>
+        <i class='bx bxs-user'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="email" placeholder="Почта" name="Email" [(ngModel)]="dataRegister.email" required>
+        <i class='bx bxs-envelope'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="password" placeholder="Пароль" name="Password" [(ngModel)]="dataRegister.password" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="text" placeholder="Имя" name="FirstName" [(ngModel)]="dataRegister.firstName" required>
+        <i class='bx bxs-user-detail'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="text" placeholder="Фамилия" name="LastName" [(ngModel)]="dataRegister.lastName"  required>
+        <i class='bx bxs-user-detail'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="text" placeholder="Отчество" name="MiddleName" [(ngModel)]="dataRegister.middleName"  required>
+        <i class='bx bxs-user-detail'></i>
+      </div>
+
+      <div class="input-box">
+        <div class="role-container">
+          <label>Роль:</label>
+          <div class="role-options">
+            <label>
+              <input type="radio" name="role" value="student" [(ngModel)]="dataRegister.role" required>
+              <span>Ученик</span>
+            </label>
+            <label>
+              <input type="radio" name="role" value="teacher" [(ngModel)]="dataRegister.role" required>
+              <span>Учитель</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="dataRegister.role === 'student'" class="input-box">
+        <label>Код учителя:</label>
+        <input
+          type="text"
+          placeholder="Enter teacher's code"
+          [(ngModel)]="teacherCode"
+          name="teacherCode"
+        />
+      </div>
+
+      <button type="submit" class="btn">Зарегистрироваться</button>
+    </form>
+  </div>
+  <div class="toggle-box">
+  <div class="toggle-panel toggle-right">
+    <h1>Добро пожаловать!</h1>
+    <p>Уже есть аккаунт?</p>
+    <button class="btn register-btn" [routerLink]="'/login'">Авторизация</button>
+  </div>
+  </div>
+  </div>
+</body>
+</html>

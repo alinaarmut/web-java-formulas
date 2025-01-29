@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Упражнения с карточками</title>
+  <link rel="stylesheet" href="exercise-two.component.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script type="text/javascript" id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<body>
+<div class="card-count">
+  Всего карточек: <span>{{ totalCards }}</span>
+</div>
+<button class="home-icon" (click)="navigateHome()">
+  <i class="fas fa-home"></i>
+</button>
+
+<div class="exercise-container">
+  <h1>Знаешь как называется эта формула?</h1>
+
+  <!-- Стрелка влево -->
+  <button class="arrow left" (click)="prevCard()">
+    <i class="fas fa-arrow-left"></i>
+  </button>
+
+  <div
+    *ngIf="currentCard"
+    class="card"
+    [class.flipped]="currentCard.isFlipped"
+    (click)="flipCard(currentCard)"
+  >
+    <div class="card-content" *ngIf="!currentCard.isFlipped">
+      <!-- Используем innerHTML для формул -->
+      <span class="text"  [innerHTML]="'$$' + currentCard.formula + '$$'"></span>
+    </div>
+    <div class="card-description" *ngIf="currentCard.isFlipped">
+      <span class="text">{{ currentCard.description }}</span>
+    </div>
+  </div>
+
+  <!-- Стрелка вправо -->
+  <button class="arrow right" (click)="nextCard()">
+    <i class="fas fa-arrow-right"></i>
+  </button>
+</div>
+</body>
+</html>

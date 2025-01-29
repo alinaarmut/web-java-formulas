@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  display: flex;
+  align-items: flex-start;
+  min-height: 100vh;
+  background: linear-gradient(90deg, #e2e2e2, #7494ec);
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
+.admin-container {
+  padding: 30px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+}
+
+.header {
+  margin-bottom: 30px;
+  position: relative;
+}
+.admin-container h1 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+.logout-btn {
+  position: absolute;
+  margin-top: 10px;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.users-table {
+  flex: 1;
+}
+
+.users-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.users-table th, .users-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.users-table th {
+  background-color: #f4f4f4;
+  color: #333;
+}

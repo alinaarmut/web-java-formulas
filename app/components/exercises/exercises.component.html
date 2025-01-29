@@ -1,0 +1,42 @@
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="exercises.component.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<button class="home-icon" (click)="navigateHome()">
+  <i class="fas fa-home"></i>
+</button>
+<div class="container">
+  <h2>Соедини правильно карточки</h2>
+  <div class="card-columns">
+    <div class="column" id="left-column">
+      <div *ngFor="let card of leftCards"
+           class="card"
+           [class.selected]="card.selected"
+           [class.matched]="card.matched"
+           [class.incorrect]="card.incorrect"
+           (click)="selectCard(card, 'left')">
+        {{card.text}}
+      </div>
+    </div>
+    <div class="column" id="right-column">
+      <div *ngFor="let card of rightCards"
+           class="card"
+           [class.selected]="card.selected"
+           [class.matched]="card.matched"
+           [class.incorrect]="card.incorrect"
+           (click)="selectCard(card, 'right')">
+        {{card.text}}
+      </div>
+    </div>
+  </div>
+  <div id="message">{{message}}</div>
+<!--  <div id="progress">Прогресс: {{progress}}%</div>-->
+  <div id="remainingAttempts">Оставшиеся попытки: {{remainingAttempts}}</div>
+</div>
+</body>
+</html>

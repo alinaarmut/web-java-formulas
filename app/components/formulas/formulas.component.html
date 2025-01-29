@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<button class="home-icon" (click)="navigateHome()">
+  <i class="fas fa-home"></i>
+</button>
+<div class="category">
+  <h2>Математика</h2>
+  <div class="formulas-row">
+    <div class="formula-card" *ngFor="let formula of mathFormulas">
+      <p class="formula-name">{{ formula.name }}</p>
+      <div [innerHTML]="'$$' + formula.formula + '$$'"></div>
+      <button *ngIf="isModerator" class="delete-btn" (click)="deleteCard(formula, 'Математика')">
+        Удалить
+      </button>
+
+    </div>
+  </div>
+</div>
+
+<div class="category">
+  <h2>Геометрия</h2>
+  <div class="formulas-row">
+    <div class="formula-card" *ngFor="let formula of geometryFormulas">
+      <p class="formula-name">{{ formula.name }}</p>
+      <div [innerHTML]="'$$' + formula.formula + '$$'"></div>
+      <button *ngIf="isModerator" class="delete-btn" (click)="deleteCard(formula, 'Геометрия')">
+        Удалить
+      </button>
+
+    </div>
+  </div>
+</div>
+
+<div class="category">
+  <h2>Физика</h2>
+  <div class="formulas-row">
+    <div class="formula-card" *ngFor="let formula of physicsFormulas">
+      <p class="formula-name">{{ formula.name }}</p>
+      <div [innerHTML]="'$$' + formula.formula + '$$'"></div>
+      <button *ngIf="isModerator" class="delete-btn" (click)="deleteCard(formula, 'Физика')">
+        Удалить
+      </button>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>

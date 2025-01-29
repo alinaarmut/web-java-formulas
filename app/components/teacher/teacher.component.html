@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Форма регистрации</title>
+  <link rel="stylesheet" href="teacher.component.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<button class="logout-btn" (click)="logout()">Выход</button>
+<div class="teacher-container">
+  <div class="header">
+    <h1>Панель учителя</h1>
+
+    <div class="teacher-code">
+      <p><strong>Ваш код:</strong> {{ teacherCode }}</p>
+    </div>
+  </div>
+  <div class="dashboard-content">
+
+    <div class="students-table">
+      <h2>Ученики:</h2>
+      <table>
+        <thead>
+        <tr>
+          <th>Ник</th>
+          <th>почта</th>
+          <th>Имя</th>
+          <th>Фамилия</th>
+          <th>Отчество</th>
+          <th>Прогресс</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let student of students">
+          <td>{{ student.username }}</td>
+          <td>{{ student.email }}</td>
+          <td>{{ student.firstName }}</td>
+          <td>{{ student.lastName }}</td>
+          <td>{{ student.middleName }}</td>
+          <td>{{ getStudentProgress(student.username) }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="chat-container">
+  <app-chat></app-chat>
+</div>
+
+</body>
+</html>
+

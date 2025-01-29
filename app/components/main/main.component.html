@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Главная страница</title>
+  <link rel="stylesheet" href="main.component.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+<header class="header">
+  <div class="profile-section" *ngIf="!isModerator">
+    <div class="profile-circle" title="Личный кабинет" (click)="navigateProfile()">
+    <i class="fas fa-user"></i>
+    </div>
+  </div>
+    <button class="logout-btn" (click)="logout()">Выход</button>
+
+</header>
+
+<main class="main-content">
+  <div class="buttons-container">
+    <button (click)="navigateExercise1()" class="btn">Упражнение 1</button>
+    <button (click)="navigateExercise2()" class="btn">Упражнение 2</button>
+    <button (click)="navigateFormula()" class="btn">Формулы</button>
+  </div>
+  <div class="chat-container" *ngIf="!isModerator">
+    <app-chat></app-chat>
+  </div>
+</main>
+</body>
+</html>

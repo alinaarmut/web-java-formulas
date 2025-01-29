@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+header {
+  padding: 10px;
+  text-align: center;
+}
+
+.profile-section, .progress-section, .subscription-section {
+  margin-top: 40px;
+}
+
+.profile-section {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.profile-section h2 {
+  margin: 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 30px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #daf66e;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  border-radius: 5px;
+}
+
+
+.card-section {
+  margin-top: 40px;
+}
+
+.card {
+  display: inline-block;
+  width: 200px;
+  margin-right: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card button {
+  background-color: #5456d0;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.card button:hover {
+  /*background-color: #5a9f56;*/
+}
+
+.subscription-section {
+  margin-top: 40px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.footer {
+  margin-top: 60px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+.home-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.subscription-button {
+  background-color: #5456d0;  /* Фиолетовый цвет */
+  color: white;               /* Белый цвет текста */
+  border: 2px solid #5456d0;  /* Рамка того же цвета */
+  padding: 10px 20px;         /* Отступы для кнопки */
+  font-size: 16px;            /* Размер шрифта */
+  border-radius: 5px;         /* Скругленные углы */
+  cursor: pointer;           /* Курсор в виде руки */
+  transition: all 0.3s ease;  /* Плавный переход для эффектов */
+}
+
+/*.subscription-button:hover {*/
+/*  background-color: #5a3b7e;  !* Немного темнее фиолетовый при наведении *!*/
+/*  border-color: #5a3b7e;       !* Темная рамка при наведении *!*/
+/*}*/
